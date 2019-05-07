@@ -23,5 +23,6 @@ class Frame(val T:String,var V:String) {
 
   def <<(that:Frame) = { slot(that.V) = that ; this }
   def \\(that:Frame) = { nest.append(that)   ; this }
+  def update(key:String,that:Frame) = { slot(key) = that ; this }
 
 }
